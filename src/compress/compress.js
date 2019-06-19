@@ -1,37 +1,14 @@
 'use stric';
 const renames=require("../rename/rename");
+const regexApp=require("./regexFuction/fuctionregex");
 const fs = require('fs');
-const c1=((cd)=>{
-  /* comentario */
-  return cd.replace(/\h*\/\*.*?\*\/\h*/gsm,'');;
-});
-const c2=((cd)=>{
-  // comentario 
-  return cd.replace(/\/\*.+?\*\/|\/\/.*(?=[\n\r])/g,"");
-});
-const c3=((cd)=>{
-  // <!-- comentario -->
-  return cd.replace(/\h*<!--.*?-->\h*/gsm,'');
-});
-
-
-const regexApp={
-  ".js":{
-    c1:c1,
-    c2:c2
-  },
-  ".html":{
-    ext:".js",
-    c3:c3,
-  }
-}
 
 function writeAr(p,d){
   fs.writeFile(p,d, function(err){
     if(err){
       console.log(err);
     }else{
-      console.log('Se ha escrito correctamente');
+      console.log('ok=>'+p);
     }
   });
 }
@@ -62,26 +39,19 @@ function extTypes(a,data,r) {
     return res;
   });
   this.conte=bel(this.a)
-  console.log(r)
+  //console.log(r)
   //console.log(res.trim().replace(/\s\s+/g, ' ').split("\n").join(" "))
   //.replace(/\s\s+/g, ' ')
    if(r.path1==r.path2|| r.file=='rename'){
-     console.log("re")
+     //console.log("re")
      let rPath={};
      rPath[r.path1]=r.path2;
-     console.log(rPath)
+     //console.log(rPath)
      renames(rPath)
      writeAr(r.path2,res.trim().replace(/\s\s+/g, ' ').split("\n").join(" "))
    }else{
     writeAr(r.path2,res.trim().replace(/\s\s+/g, ' ').split("\n").join(" "));
    }
-  /*fs.writeFile(r.path2,res.trim().replace(/\s\s+/g, ' ').split("\n").join(" "), function(err){
-    if(err){
-      console.log(err);
-    }else{
-      console.log('Se ha escrito correctamente');
-    }
-  });*/
 }
 function constructor(rgx,data,r) {
  new extTypes(rgx,data,r);
@@ -140,14 +110,4 @@ class compress{
   }
 }
 module.exports=new compress;
-/*new compress({
-  press:{
-    min:{
-      path:{
-        "src/compress/example.html":"src/compress/example.min.html",
-      },
-      typeCompres:"super",
-      file:"rename"
-    }
-  },
-})*/
+let compre=new compress();
