@@ -1,0 +1,30 @@
+<html>  
+  <head>
+
+  </head>
+  <body>
+
+    <script>
+       
+      function reemplazarCadena(cadenaVieja, cadenaNueva, cadenaCompleta) {
+      // Reemplaza cadenaVieja por cadenaNueva en cadenaCompleta
+      /**
+         * *{d¡?#$#""}
+         * @param {text}
+         */
+        var de="/** */ <!-- -->";
+         for (var i = 0; i < cadenaCompleta.length; i++) {
+            if (cadenaCompleta.substring(i, i + cadenaVieja.length) == cadenaVieja) {
+               cadenaCompleta= cadenaCompleta.substring(0, i) + cadenaNueva + cadenaCompleta.substring(i + cadenaVieja.length,                 cadenaCompleta.length);
+            }
+         }
+         return                   cadenaCompleta;//hola
+      }
+      /** hola*/
+   </script>
+   //hola
+              <!--
+            <h1></h1>
+     -->
+  </body>
+</html>
