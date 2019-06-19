@@ -1,5 +1,5 @@
 # Doc
-[inglish](https://github.com/Binariado/types-files-art/blob/master/README.md), [Español](https://github.com/Binariado/types-files-art/tree/master/languague-Doc/español.md)
+[inglish](https://github.com/Binariado/types-files-art/blob/master/README.md), [Español](https://github.com/Binariado/types-files-art/blob/master/language%20Doc/español.md)
 # Types files art
 file manager
 
