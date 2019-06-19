@@ -1,6 +1,6 @@
 {
   "name": "types-files-art",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "manejador de archivos",
   "type": "module",
   "main": "index.js",
