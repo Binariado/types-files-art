@@ -1,4 +1,4 @@
-#Types files art
+# Types files art
 manejador de archivos
 
 # Empezando 
