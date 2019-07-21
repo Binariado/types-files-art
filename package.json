@@ -13,11 +13,11 @@
     "url": "git+https://github.com/Binariado/types-files-art.git"
   },
   "keywords": [
-     "types",
-     "files",
-     "art",
-     "compress",
-     "rename"
+    "types",
+    "files",
+    "art",
+    "compress",
+    "rename"
   ],
   "author": "Brayan Salgado Navarro",
   "license": "MIT",
